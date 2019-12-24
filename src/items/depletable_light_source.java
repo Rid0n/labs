@@ -35,13 +35,13 @@ public abstract class depletable_light_source extends light_source implements de
             return true;
         }
         else{
-            this.isLIT = false;
+            this.Deactivate();
             return false;// to main
         }
     }
     @Override
     public boolean isActive(){
-        return fueled() & isLIT;
+        return fueled() & super.isActive();
     }
     public int getFuel_amount(){
         return this.fuel_amount;
@@ -50,9 +50,9 @@ public abstract class depletable_light_source extends light_source implements de
         int a = 0;// dodelay
     }
     public void burn_fuel(){
-        if (this.isLIT & this.fuel_amount!=0){
+        if (this.isActive()){
             this.fuel_amount -= 1;
-            System.out.printf("%s is operational", type);
+            System.out.printf("%s is operational %n", getType());
         }
         else {
             System.out.println("Not lit or no fuel");

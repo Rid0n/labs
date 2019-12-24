@@ -5,7 +5,13 @@ public class fireplace extends depletable_light_source {
     public fireplace(int x,int y, boolean isLIT, int fuel_amount,int maxCapacity) {
         super(x,y, isLIT, fuel_amount, maxCapacity);
     }
-    public fireplace(int x,int y, boolean isLIT, int fuel_amount) {
+
+    @Override
+    public String getType() {
+        return type;
+    }
+
+    public fireplace(int x, int y, boolean isLIT, int fuel_amount) {
         super(x,y, isLIT, fuel_amount);
     }
 }

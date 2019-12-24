@@ -9,4 +9,8 @@ public class kerosine_lamp extends depletable_light_source { // lets be in perce
     public kerosine_lamp(int x,int y,boolean isLIT, int fuel_amount){
         super(x,y, isLIT, fuel_amount);
     }
+    @Override
+    public String getType() {
+        return type;
+    }
 }
