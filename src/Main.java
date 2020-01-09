@@ -51,9 +51,6 @@ public class Main {
         //Karlson go to lamp
         lamp.activate();
         act.refresh_env();
-//        while(lamp.isActive()){
-//            lamp.burn_fuel();
-//        }
 
         //System.out.println(act.actions(karl::getX));
         //change lighting

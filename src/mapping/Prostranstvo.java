@@ -116,21 +116,7 @@ public class Prostranstvo {
 
     }
 
-    public int getX1KoordOfMultObj(Item obj) {
-        return obj.getX();
-    }
 
-    public int getX2KoordOfMultObj(Item obj) {
-        return obj.getX2();
-    }
-
-    public int getY1KoordOfMultObj(Item obj) {
-        return obj.getY();
-    }
-
-    public int getY2KoordOfMultObj(Item obj) {
-        return obj.getY2();
-    }
 
     public void AddOnMap(Item obj) {
         if (this.getObjInCoord(obj.getX(), obj.getY()) == null) {

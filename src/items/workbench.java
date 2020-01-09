@@ -13,7 +13,7 @@ public class Workbench extends Item {
     public void addItem(Item Item, int workbenchX){
         Item.setPosition(workbenchX,this.getY()+1);
         ItemList.add(Item);
-        System.out.println(Item.getName() + " added to the bench !");
+
     }
     public ArrayList<Item> getItemlist(){
         return ItemList;
