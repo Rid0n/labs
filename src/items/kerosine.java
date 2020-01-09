@@ -1,10 +1,11 @@
 package items;
 
-public class kerosine extends items {
+public class Kerosine extends Item {
     private int size;
+    private static final String NAME = "Firewood";
     private static int burniness = 40;
-    public kerosine(int x,int y, int size){
-        super(x,y);
+    public Kerosine(int x, int y, int size){
+        super(x,y, NAME);
         this.size = size;
     };
     public int getBurntime() {

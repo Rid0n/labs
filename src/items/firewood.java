@@ -1,10 +1,10 @@
 package items;
 
-abstract class firewood extends items{
+abstract class Firewood extends Item {
     //size - 1 to 3
     protected int size;
-    public firewood(int x,int y,int size){
-        super(x,y);
+    public Firewood(int x, int y, int size, String name){
+        super(x,y,name);
         this.size = size;
     }
     public int getBurntime() {
@@ -14,3 +14,4 @@ abstract class firewood extends items{
         this.size = size;
     }
 }
+//check

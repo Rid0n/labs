@@ -1,6 +1,6 @@
 package entities;
 
-public class Karlson extends entity {
+public class Karlson extends Entity {
     public Karlson(int x,int y){
         super(x,y);
     }

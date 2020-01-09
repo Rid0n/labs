@@ -1,18 +1,14 @@
 package items;
 
-public class fireplace extends depletable_light_source {
-    private String type = "Fireplace";
-    public fireplace(int x,int y, boolean isLIT, int fuel_amount,int maxCapacity) {
-        super(x,y, isLIT, fuel_amount, maxCapacity);
+public class Fireplace extends DepletableLightSource {
+    private static String type = "Fireplace";
+    public Fireplace(int x, int y, boolean isLIT, int fuel_amount, int maxCapacity) {
+        super(x,y, isLIT, type,fuel_amount, maxCapacity);
     }
 
-    @Override
-    public String getType() {
-        return type;
-    }
 
-    public fireplace(int x, int y, boolean isLIT, int fuel_amount) {
-        super(x,y, isLIT, fuel_amount);
+    public Fireplace(int x, int y, boolean isLIT, int fuel_amount) {
+        super(x,y, isLIT,type, fuel_amount);
     }
 }
 

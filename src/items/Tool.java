@@ -1,9 +1,10 @@
 package items;
 
-public class Tool extends items {
+public class Tool extends Item {
     private String use;
-    public Tool(int x,int y,String use){
-        super(x,y);
+    private String name;
+    public Tool(int x,int y,String name,String use){
+        super(x,y,name);
         this.use = use;
     };
     public void setUse(String use){

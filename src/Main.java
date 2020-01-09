@@ -1,30 +1,61 @@
-import entities.Karlson;
-import items.birch_firewood;
+import entities.*;
+import items.BirchFirewood;
 import items.*;
+//import mapping.Prostranstvo;
+
+
 public class Main {
     public static void main(String[] args){
-        Karlson Karl= new Karlson(1,1);
-        fireplace Fireplace = new fireplace(1,1,true,50);
-        birch_firewood birch = new birch_firewood(1,1,2);
-        kerosine_lamp Lamp = new kerosine_lamp(2,2,false,50);
-        workbench WorkBench = new workbench(6,6,2); //learn to map big objects
-        Tool Hammer = new Tool(2,6,"To provide strong blunt force");
-        Tool Scissors = new Tool(1,6,"To cut through surfaces");
-        WorkBench.addItem(Hammer, 1);
-        WorkBench.addItem(Scissors, 2);
-        room Room = new room();
-        //Karl.go
-        Fireplace.refuel(birch,1);
-        Fireplace.refuel(birch);
-        while(Fireplace.isActive()){
-            Fireplace.burn_fuel();
-            //Fireplace.emitLight(Light_map);
-        }
+        Action act = new Action();
+
+        Karlson karl= new Karlson(1,1);
+        Fireplace fireplace = new Fireplace(1,1,true,50);
+        act.addLightToList(fireplace);
+
+        BirchFirewood birch = new BirchFirewood(1,1,2);
+
+        KerosineLamp lamp = new KerosineLamp(2,2,false,50);
+        act.addLightToList(lamp);
+
+        Workbench workbench = new Workbench(6,6,2); //learn to map big objects
+
+        Tool hammer = new Tool(2,6,"hammer","To provide strong blunt force");
+        Tool scissors = new Tool(1,6, "scissors","To cut through surfaces");
+
+        workbench.addItem(hammer, 1);
+        workbench.addItem(scissors, 2);
+
+        room room = new room();
+
+//        Prostranstvo Map = new Prostranstvo();
+//        Map.AddOnMap(lamp);
+//        Map.AddMultlObjOnMap(workbench);
+//        Map.AddOnMap(birch);
+//        Map.ShowMap();
+//        Map.AddIstSveta(fireplace,3);
+
+        //light_map Light_map = new light_map();
+        //karl.go
+        act.refresh_env();
+
+        fireplace.refuel(birch,1);
+        act.refresh_env();
+        fireplace.refuel(birch);
+        act.refresh_env();
+
+//        while(fireplace.isActive()){
+//            fireplace.burn_fuel();
+//            //fireplace.emitLight(Light_map);
+//        }
         //change lighting
         //Karlson go to lamp
-        //Lamp.Activate();
-        //Lamp.burn_fuel();
-        //Lamp.emitLight(Light_map);
+        lamp.activate();
+        act.refresh_env();
+//        while(lamp.isActive()){
+//            lamp.burn_fuel();
+//        }
+
+        //System.out.println(act.actions(karl::getX));
         //change lighting
     }
 
