@@ -10,5 +10,5 @@ public class BirchFirewood extends Firewood {
     public int getBurntime() {
         return this.burniness*this.size;
     }
-}// change string(size) to sth else
+}
 

@@ -1,6 +1,6 @@
 package items;
 
-public class Kerosine extends Item {
+public class Kerosine extends Matter {
     private int size;
     private static final String NAME = "Firewood";
     private static int burniness = 40;

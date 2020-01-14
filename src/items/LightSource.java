@@ -2,14 +2,13 @@ package items;
 
 import java.util.Objects;
 
-public abstract class LightSource extends Item implements LightInterface {
+public abstract class LightSource extends Matter implements LightInterface {
     private boolean isLIT;
 
-    private int intensity;
+    private int intensity=5;
     public LightSource(int x, int y, boolean isLIT, String name){
         super(x,y,name);
         this.isLIT = isLIT;
-
     }
 
     public void setIntensity(int intensity) {
@@ -29,19 +28,6 @@ public abstract class LightSource extends Item implements LightInterface {
     public boolean isActive(){
         return isLIT;
     }
-//    public void emitLight(map map){
-//        if (isLIT){
-//            for (int i = 0;i<sizex;i++){
-//                for (int j = 0;j<sizey;j++){
-//                    int d = ((getX()+getY())-(i+j));
-//                    map[i][j] = intensity/d/d; // light intensity decreases with square of distance
-//                }
-//            }
-//        }//constant check -> recheck
-//    }
-    public void emitLight() {
-
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -57,8 +43,5 @@ public abstract class LightSource extends Item implements LightInterface {
         result = 31 * result + Boolean.valueOf(isLIT).hashCode();
         return result;
     }
-    @Override
-    public String toString() {
-        return ("Light source type is " + getName() + " and it is at x" + getX() + "y" + getY());
-    }
+
 }

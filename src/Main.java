@@ -1,59 +1,82 @@
 import entities.*;
-import items.BirchFirewood;
+
 import items.*;
-//import mapping.Prostranstvo;
+import mapping.Prostranstvo;
 
 
 public class Main {
     public static void main(String[] args){
         Action act = new Action();
 
-        Karlson karl= new Karlson(1,1);
-        Fireplace fireplace = new Fireplace(1,1,true,50);
+        Karlson karl= new Karlson(6,3,"карлсон");
+        Fireplace fireplace = new Fireplace(1,1,true,3);
         act.addLightToList(fireplace);
 
-        BirchFirewood birch = new BirchFirewood(1,1,2);
+        BirchFirewood birch1 = new BirchFirewood(15,11,2);
+        BirchFirewood birch2 = new BirchFirewood(16,12,2);
 
-        KerosineLamp lamp = new KerosineLamp(2,2,false,50);
+        KerosineLamp lamp = new KerosineLamp(48,22,false,10);
+
+
+        Workbench workbench = new Workbench(35,49,1,7,"workbench"); //learn to map big objects
+
+        Tool hammer = new Tool(5,6,"hammer","To provide strong blunt force");
+        Tool scissors = new Tool(7,6, "scissors","To cut through surfaces");
+
+        SittableOnItem chair = new SittableOnItem(31,35,1,4,"Wood","chair",4);
+
+        Prostranstvo map = new Prostranstvo();
+        map.addOnMap(birch1);
+        map.addOnMap(birch2);
+        map.addOnMap(hammer);
+        map.addMultlObjOnMap(chair);
+        map.addOnMap(scissors);
+        map.addMultlObjOnMap(workbench);
+        map.addIstSveta(fireplace);
+
+        map.addOnMap(karl);
+
+        workbench.addItem(hammer, 1,map);
+        workbench.addItem(scissors, 2,map);
+
+        map.moveObj(karl, 2,1);
+        System.out.println("Карлсон подошел к Камину");
+
+
+        act.refreshEnvironment(); // взял за руку
+
+        //karl.action(birch,1,fireplace::);
+        fireplace.refuel(birch1,1); // уверенно сказал
+        map.deleteObj(birch1);
+        System.out.println("Карлсон вкинул бревно");
+        map.showLightMap();
+        act.refreshEnvironment();
+        fireplace.refuel(birch1);
+        System.out.println("Карлсон вкинул бревно");
+        map.deleteObj(birch2);
+        map.showLightMap();
+        act.refreshEnvironment();
+
+
+        while(fireplace.isActive()){
+            map.showLightMap();
+            act.refreshEnvironment();
+        }
+        System.out.println("Камин прогорел");
+
+
+        map.moveObj(karl,lamp.getX(),lamp.getY()-1);
+        System.out.println("Карлсон подлетел к лампе");
+        //!!!!!
+        karl.action(lamp::activate);
+        System.out.println("Карлсон включил лампу");
         act.addLightToList(lamp);
+        map.leaveLightFrom(lamp);
 
-        Workbench workbench = new Workbench(6,6,2); //learn to map big objects
+        act.refreshEnvironment();
+        map.showLightMap();
 
-        Tool hammer = new Tool(2,6,"hammer","To provide strong blunt force");
-        Tool scissors = new Tool(1,6, "scissors","To cut through surfaces");
 
-        workbench.addItem(hammer, 1);
-        workbench.addItem(scissors, 2);
-
-        room room = new room();
-
-//        Prostranstvo Map = new Prostranstvo();
-//        Map.AddOnMap(lamp);
-//        Map.AddMultlObjOnMap(workbench);
-//        Map.AddOnMap(birch);
-//        Map.ShowMap();
-//        Map.AddIstSveta(fireplace,3);
-
-        //light_map Light_map = new light_map();
-        //karl.go
-        act.refresh_env();
-
-        fireplace.refuel(birch,1);
-        act.refresh_env();
-        fireplace.refuel(birch);
-        act.refresh_env();
-
-//        while(fireplace.isActive()){
-//            fireplace.burn_fuel();
-//            //fireplace.emitLight(Light_map);
-//        }
-        //change lighting
-        //Karlson go to lamp
-        lamp.activate();
-        act.refresh_env();
-
-        //System.out.println(act.actions(karl::getX));
-        //change lighting
     }
 
 }

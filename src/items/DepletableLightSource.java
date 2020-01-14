@@ -43,7 +43,7 @@ public abstract class DepletableLightSource extends LightSource implements Deple
     public boolean isActive(){
         return fueled() & super.isActive();
     }
-    public int getFuel_amount(){
+    public int getFuelAmount(){
         return this.fuel_amount;
     }
 
@@ -63,4 +63,7 @@ public abstract class DepletableLightSource extends LightSource implements Deple
     public void setMaxCapacity(int maxCapacity){
         this.maxCapacity = maxCapacity;
     }
+
+
+
 }

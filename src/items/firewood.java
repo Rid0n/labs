@@ -1,6 +1,6 @@
 package items;
 
-abstract class Firewood extends Item {
+abstract class Firewood extends Matter {
     //size - 1 to 3
     protected int size;
     public Firewood(int x, int y, int size, String name){
@@ -14,4 +14,3 @@ abstract class Firewood extends Item {
         this.size = size;
     }
 }
-//check

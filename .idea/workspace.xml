@@ -13,6 +13,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -31,13 +32,24 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/mapping/Enum.java" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/src/mapping/Enum.java" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\space\IdeaProjects\lab3\src\mapping" />
+      <recent name="C:\Users\space\IdeaProjects\lab3\src\items" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -79,7 +91,7 @@
       <workItem from="1576939439943" duration="27670000" />
       <workItem from="1577124098007" duration="2904000" />
       <workItem from="1577166181463" duration="11043000" />
-      <workItem from="1578481296901" duration="22059000" />
+      <workItem from="1578481296901" duration="50167000" />
     </task>
     <servers />
   </component>
@@ -99,42 +111,54 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="566" y="317" width="403" height="239" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.864@0.0.1536.864" timestamp="1578576036424" />
-    <state x="7" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1578576088546">
+    <state x="7" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1578953269380">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="7" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864@0.0.1536.864" timestamp="1578576088545" />
+    <state x="7" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864@0.0.1536.864" timestamp="1578953269380" />
     <state x="499" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578571858026">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="499" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1578571858026" />
-    <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1578578345836">
+    <state x="93" y="93" width="1350" height="678" key="DiffContextDialog" timestamp="1578588902634">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1578578345835" />
-    <state width="1493" height="223" key="GridCell.Tab.0.center" timestamp="1578578345835">
+    <state x="93" y="93" width="1350" height="678" key="DiffContextDialog/0.0.1536.864@0.0.1536.864" timestamp="1578588902634" />
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1578962363551">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1578578345835" />
-    <state width="1493" height="223" key="GridCell.Tab.0.left" timestamp="1578578345835">
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1578962363551" />
+    <state width="1493" height="366" key="GridCell.Tab.0.bottom" timestamp="1578967013928">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1578578345835" />
-    <state width="1493" height="223" key="GridCell.Tab.0.right" timestamp="1578578345835">
+    <state width="1493" height="366" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1578967013928" />
+    <state width="1493" height="366" key="GridCell.Tab.0.center" timestamp="1578967013927">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1578578345835" />
-    <state x="0" y="149" key="SettingsEditor" timestamp="1576939351221">
+    <state width="1493" height="366" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1578967013927" />
+    <state width="1493" height="366" key="GridCell.Tab.0.left" timestamp="1578967013927">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="0" y="149" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1576939351221" />
+    <state width="1493" height="366" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1578967013927" />
+    <state width="1493" height="366" key="GridCell.Tab.0.right" timestamp="1578967013927">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="366" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1578967013927" />
+    <state x="0" y="13" key="SettingsEditor" timestamp="1578962863921">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="0" y="13" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1578962863921" />
     <state x="470" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1578481296875">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="470" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1578481296875" />
-    <state x="475" y="51" key="refactoring.ChangeSignatureDialog" timestamp="1578560572227">
+    <state x="209" y="52" key="new project wizard" timestamp="1578922161516">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="475" y="51" key="refactoring.ChangeSignatureDialog/0.0.1536.864@0.0.1536.864" timestamp="1578560572227" />
+    <state x="209" y="52" key="new project wizard/0.0.1536.864@0.0.1536.864" timestamp="1578922161516" />
+    <state x="475" y="51" key="refactoring.ChangeSignatureDialog" timestamp="1578964252709">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="475" y="51" key="refactoring.ChangeSignatureDialog/0.0.1536.864@0.0.1536.864" timestamp="1578964252709" />
     <state x="425" y="197" key="run.anything.popup" timestamp="1577032827714">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

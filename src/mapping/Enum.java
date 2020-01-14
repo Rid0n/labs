@@ -4,7 +4,7 @@ public enum Enum {
     Wall("Стена"),
     Surface("Поверхность"),
     Air("Воздух");
-    private final String description;
+    final String description;
     private Enum(String p){
         description = p;
     }
